@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function AboutPage() {
   return (
@@ -37,13 +38,17 @@ export default function AboutPage() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <div className="aspect-[3/4] bg-navy/10 border border-gold/20 flex items-center justify-center relative overflow-hidden">
-              <div className="text-center">
-                <div className="text-8xl mb-4">👤</div>
-                <p className="text-text-gray font-inter text-sm">Photo d&apos;Halimé</p>
-              </div>
-              <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-gold" />
-              <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-gold" />
+            <div className="aspect-[3/4] relative overflow-hidden">
+              <Image
+                src="/halime.png"
+                alt="Halimé BRAHIM MAHAMAT — Juriste fondatrice de Depari'Lex"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+              <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-gold z-10" />
+              <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-gold z-10" />
             </div>
           </motion.div>
 

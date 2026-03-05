@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function AboutPreview() {
   return (
@@ -16,14 +17,18 @@ export default function AboutPreview() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="aspect-[3/4] max-w-sm mx-auto bg-navy/10 border border-gold/20 flex items-center justify-center relative overflow-hidden">
-              <div className="text-center">
-                <div className="text-6xl mb-4">👤</div>
-                <p className="text-text-gray font-inter text-sm">Photo à venir</p>
-              </div>
+            <div className="aspect-[3/4] max-w-sm mx-auto relative overflow-hidden">
+              <Image
+                src="/halime.png"
+                alt="Halimé BRAHIM MAHAMAT — Juriste Depari'Lex"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 100vw, 384px"
+                priority
+              />
               {/* Gold corner accents */}
-              <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-gold" />
-              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-gold" />
+              <div className="absolute top-0 left-0 w-12 h-12 border-t-2 border-l-2 border-gold z-10" />
+              <div className="absolute bottom-0 right-0 w-12 h-12 border-b-2 border-r-2 border-gold z-10" />
             </div>
           </motion.div>
 
