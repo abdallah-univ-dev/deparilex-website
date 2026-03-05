@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import Navbar from '@/components/Navbar'
 
 export const metadata: Metadata = {
   title: "Depari'Lex — Conseil Juridique en Droit des Affaires",
@@ -14,7 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        {children}
+      </body>
     </html>
   )
 }
