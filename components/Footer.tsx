@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo & tagline */}
           <div>
-            <Image src="/logo.png" alt="Depari'Lex" width={120} height={48} className="h-10 w-auto mb-4" />
+            <Image src="/logo.png" alt="Depari'Lex" width={180} height={72} className="h-16 w-auto mb-4" />
             <p className="text-white/50 text-sm font-inter leading-relaxed">
               Conseil juridique expert en droit des affaires pour entrepreneurs et dirigeants.
             </p>
