@@ -1,12 +1,14 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import { GraduationCap, Shield, Clock3, Briefcase } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 
-const values = [
-  { icon: '⚖️', title: 'Juriste diplômée', desc: "Master en droit des affaires et de l'entreprise" },
-  { icon: '💎', title: 'Tarifs transparents', desc: 'Devis clair, sans surprise ni facturation cachée' },
-  { icon: '⚡', title: 'Réponse sous 48h', desc: 'Engagement de réactivité pour chaque demande' },
-  { icon: '🎯', title: 'Spécialiste B2B', desc: 'Exclusivement dédié aux entreprises et dirigeants' },
+const values: { Icon: LucideIcon; title: string; desc: string }[] = [
+  { Icon: GraduationCap, title: 'Juriste diplômée', desc: "Master en droit des affaires et de l'entreprise" },
+  { Icon: Shield, title: 'Tarifs transparents', desc: 'Devis clair, sans surprise ni facturation cachée' },
+  { Icon: Clock3, title: 'Réponse sous 48h', desc: 'Engagement de réactivité pour chaque demande' },
+  { Icon: Briefcase, title: 'Spécialiste B2B', desc: 'Exclusivement dédié aux entreprises et dirigeants' },
 ]
 
 export default function WhySection() {
@@ -49,7 +51,9 @@ export default function WhySection() {
               transition={{ duration: 0.6, delay: i * 0.12 }}
               className="border border-gold/20 p-6 hover:border-gold/50 transition-colors duration-300 text-center group"
             >
-              <div className="text-3xl mb-4">{item.icon}</div>
+              <div className="w-12 h-12 border border-gold/30 flex items-center justify-center mx-auto mb-5 group-hover:border-gold/60 transition-colors">
+                <item.Icon className="w-5 h-5 text-gold" strokeWidth={1.5} />
+              </div>
               <h3 className="font-playfair text-lg text-gold mb-2">{item.title}</h3>
               <p className="text-white/50 font-inter text-sm leading-relaxed">{item.desc}</p>
             </motion.div>

@@ -2,11 +2,13 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { BookOpen, SearchCheck, PenLine, Handshake } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 
-const services = [
+const services: { id: string; Icon: LucideIcon; title: string; description: string; details: string[] }[] = [
   {
     id: 'information',
-    icon: '📋',
+    Icon: BookOpen,
     title: 'Information juridique',
     description: "Vous avez une question juridique mais ne savez pas à qui vous adresser ? Je vous apporte des réponses claires, précises et adaptées à votre situation, sans jargon inutile.",
     details: [
@@ -18,7 +20,7 @@ const services = [
   },
   {
     id: 'analyse',
-    icon: '🔍',
+    Icon: SearchCheck,
     title: 'Analyse juridique',
     description: "Avant de signer, de vous engager ou de prendre une décision importante, une analyse juridique rigoureuse vous permet d'identifier les risques et de sécuriser votre position.",
     details: [
@@ -30,7 +32,7 @@ const services = [
   },
   {
     id: 'redaction',
-    icon: '✍️',
+    Icon: PenLine,
     title: 'Rédaction de documents',
     description: "Des documents juridiques bien rédigés sont le fondement de toute relation d'affaires sécurisée. Je rédige des documents sur mesure qui protègent réellement vos intérêts.",
     details: [
@@ -42,7 +44,7 @@ const services = [
   },
   {
     id: 'accompagnement',
-    icon: '🤝',
+    Icon: Handshake,
     title: 'Accompagnement juridique',
     description: "Bénéficiez d'un suivi juridique personnalisé dans la durée. Je deviens votre interlocuteur juridique de référence pour toutes vos questions au quotidien.",
     details: [
@@ -92,7 +94,9 @@ export default function ServicesPage() {
             className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
           >
             <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
-              <div className="text-5xl mb-4">{service.icon}</div>
+              <div className="w-14 h-14 border border-navy/20 flex items-center justify-center mb-6">
+                <service.Icon className="w-6 h-6 text-navy" strokeWidth={1.5} />
+              </div>
               <h2 className="font-playfair text-3xl text-navy mb-4">{service.title}</h2>
               <p className="text-text-gray font-inter leading-relaxed mb-6">{service.description}</p>
               <Link

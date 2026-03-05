@@ -2,28 +2,30 @@
 
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { BookOpen, SearchCheck, PenLine, Handshake } from 'lucide-react'
+import type { LucideIcon } from 'lucide-react'
 
-const services = [
+const services: { Icon: LucideIcon; title: string; description: string; href: string }[] = [
   {
-    icon: '📋',
+    Icon: BookOpen,
     title: 'Information juridique',
     description: 'Réponses claires et précises à vos questions de droit des affaires. Comprenez vos droits et obligations avant chaque décision importante.',
     href: '/services#information',
   },
   {
-    icon: '🔍',
+    Icon: SearchCheck,
     title: 'Analyse juridique',
     description: "Examen approfondi de vos contrats, situations et risques juridiques. Identifiez les points de vigilance avant qu'ils deviennent des problèmes.",
     href: '/services#analyse',
   },
   {
-    icon: '✍️',
+    Icon: PenLine,
     title: 'Rédaction de documents',
     description: 'Contrats, CGV, statuts, courriers et actes juridiques rédigés sur mesure. Des documents solides qui protègent vos intérêts.',
     href: '/services#redaction',
   },
   {
-    icon: '🤝',
+    Icon: Handshake,
     title: 'Accompagnement juridique',
     description: 'Suivi personnalisé dans vos projets et décisions stratégiques. Un partenaire juridique de confiance à vos côtés au quotidien.',
     href: '/services#accompagnement',
@@ -78,7 +80,9 @@ export default function ServicesSection() {
               whileHover={{ y: -4 }}
               className="group bg-white border border-gray-100 p-8 hover:border-gold/40 hover:shadow-xl hover:shadow-gold/5 transition-all duration-300 cursor-pointer"
             >
-              <div className="text-3xl mb-4">{service.icon}</div>
+              <div className="w-12 h-12 border border-gold/30 flex items-center justify-center mb-6 group-hover:border-gold group-hover:bg-gold/5 transition-all duration-300">
+                <service.Icon className="w-5 h-5 text-gold" strokeWidth={1.5} />
+              </div>
               <h3 className="font-playfair text-xl text-navy mb-3 group-hover:text-gold transition-colors">
                 {service.title}
               </h3>
