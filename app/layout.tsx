@@ -4,6 +4,7 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import JsonLd from '@/components/JsonLd'
+import CookieBanner from '@/components/CookieBanner'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -59,6 +60,7 @@ export default function RootLayout({
         <JsonLd />
         <Navbar />
         {children}
+        <CookieBanner />
         <Footer />
       </body>
     </html>

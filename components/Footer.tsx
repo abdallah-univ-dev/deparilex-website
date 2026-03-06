@@ -21,6 +21,7 @@ export default function Footer() {
               {[
                 { href: '/', label: 'Accueil' },
                 { href: '/services', label: 'Services' },
+                { href: '/blog', label: 'Ressources' },
                 { href: '/a-propos', label: 'À propos' },
                 { href: '/contact', label: 'Contact' },
                 { href: '/mentions-legales', label: 'Mentions légales' },

@@ -3,6 +3,7 @@ import Hero from '@/components/sections/Hero'
 import ServicesSection from '@/components/sections/ServicesSection'
 import WhySection from '@/components/sections/WhySection'
 import TestimonialsSection from '@/components/sections/TestimonialsSection'
+import PricingSection from '@/components/sections/PricingSection'
 import AboutPreview from '@/components/sections/AboutPreview'
 import ContactCTA from '@/components/sections/ContactCTA'
 
@@ -26,6 +27,7 @@ export default function HomePage() {
       <ServicesSection />
       <WhySection />
       <TestimonialsSection />
+      <PricingSection />
       <AboutPreview />
       <ContactCTA />
     </main>
