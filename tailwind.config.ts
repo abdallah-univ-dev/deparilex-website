@@ -16,8 +16,8 @@ const config: Config = {
         'text-gray': '#4A5568',
       },
       fontFamily: {
-        playfair: ['Playfair Display', 'serif'],
-        inter: ['Inter', 'sans-serif'],
+        playfair: ['var(--font-playfair)', 'serif'],
+        inter: ['var(--font-inter)', 'sans-serif'],
       },
     },
   },

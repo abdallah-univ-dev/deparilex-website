@@ -6,7 +6,7 @@ import Link from 'next/link'
 export default function ContactCTA() {
   return (
     <section className="py-24 bg-navy relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-navy via-[#0d223e] to-navy" />
+      <div className="absolute inset-0 bg-navy" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-gold/8 rounded-full blur-[80px]" />
 
       <div className="relative max-w-3xl mx-auto px-6 text-center">

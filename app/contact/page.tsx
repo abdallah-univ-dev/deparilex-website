@@ -8,7 +8,7 @@ export default function ContactPage() {
     <main className="bg-off-white min-h-screen">
       {/* Header */}
       <section className="bg-navy py-32 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0d223e] to-navy" />
+        <div className="absolute inset-0 bg-navy" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
         <motion.div
           initial={{ opacity: 0, y: 30 }}
