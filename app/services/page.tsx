@@ -1,9 +1,21 @@
-'use client'
-
-import { motion } from 'framer-motion'
+import type { Metadata } from 'next'
+import PageHeader from '@/components/PageHeader'
 import Link from 'next/link'
 import { BookOpen, SearchCheck, PenLine, Handshake } from 'lucide-react'
 import type { LucideIcon } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: "Nos Services — Conseil juridique en droit des affaires | Depari'Lex",
+  description: "Découvrez nos 4 prestations juridiques : information, analyse, rédaction de contrats et accompagnement personnalisé pour entrepreneurs à Bordeaux.",
+  openGraph: {
+    title: "Nos Services | Depari'Lex",
+    description: "Information, analyse, rédaction et accompagnement juridique pour entrepreneurs et dirigeants.",
+    url: 'https://deparilex.fr/services',
+    siteName: "Depari'Lex",
+    locale: 'fr_FR',
+    type: 'website',
+  },
+}
 
 const services: { id: string; Icon: LucideIcon; title: string; description: string; details: string[] }[] = [
   {
@@ -59,38 +71,18 @@ const services: { id: string; Icon: LucideIcon; title: string; description: stri
 export default function ServicesPage() {
   return (
     <main className="bg-off-white min-h-screen">
-      {/* Header */}
-      <section className="bg-navy py-32 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-navy" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="relative max-w-3xl mx-auto text-center"
-        >
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-px w-12 bg-gold/60" />
-            <span className="text-gold text-xs tracking-[0.3em] uppercase font-inter">Nos Prestations</span>
-            <div className="h-px w-12 bg-gold/60" />
-          </div>
-          <h1 className="font-playfair text-5xl text-white mb-4">Nos Services</h1>
-          <p className="text-white/60 font-inter text-lg">
-            Quatre prestations conçues pour répondre aux besoins juridiques concrets des entrepreneurs.
-          </p>
-        </motion.div>
-      </section>
+      <PageHeader
+        eyebrow="Nos Prestations"
+        title="Nos Services"
+        subtitle="Quatre prestations conçues pour répondre aux besoins juridiques concrets des entrepreneurs."
+      />
 
       {/* Services detail */}
       <div className="max-w-5xl mx-auto px-6 py-24 space-y-16">
         {services.map((service, i) => (
-          <motion.div
+          <div
             key={service.id}
             id={service.id}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
             className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
           >
             <div className={i % 2 === 1 ? 'lg:order-2' : ''}>
@@ -117,7 +109,7 @@ export default function ServicesPage() {
                 ))}
               </ul>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
 

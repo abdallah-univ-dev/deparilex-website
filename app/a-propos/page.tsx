@@ -1,43 +1,34 @@
-'use client'
-
-import { motion } from 'framer-motion'
+import type { Metadata } from 'next'
+import PageHeader from '@/components/PageHeader'
 import Link from 'next/link'
 import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title: "À propos — Halimé BRAHIM MAHAMAT, juriste | Depari'Lex",
+  description: "Juriste diplômée en droit des affaires et de l'entreprise, fondatrice de Depari'Lex à Bordeaux. Accompagnement juridique des entrepreneurs avec proximité et rigueur.",
+  openGraph: {
+    title: "Halimé BRAHIM MAHAMAT — Juriste | Depari'Lex",
+    description: "Juriste diplômée en droit des affaires, fondatrice de Depari'Lex à Bordeaux.",
+    url: 'https://deparilex.fr/a-propos',
+    siteName: "Depari'Lex",
+    locale: 'fr_FR',
+    type: 'profile',
+  },
+}
 
 export default function AboutPage() {
   return (
     <main className="bg-off-white min-h-screen">
-      {/* Header */}
-      <section className="bg-navy py-32 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-navy" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="relative max-w-3xl mx-auto text-center"
-        >
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-px w-12 bg-gold/60" />
-            <span className="text-gold text-xs tracking-[0.3em] uppercase font-inter">Qui sommes-nous</span>
-            <div className="h-px w-12 bg-gold/60" />
-          </div>
-          <h1 className="font-playfair text-5xl text-white mb-4">À propos</h1>
-          <p className="text-white/60 font-inter text-lg">
-            Connaissance du droit, proximité humaine.
-          </p>
-        </motion.div>
-      </section>
+      <PageHeader
+        eyebrow="Qui sommes-nous"
+        title="À propos"
+        subtitle="Connaissance du droit, proximité humaine."
+      />
 
       <div className="max-w-5xl mx-auto px-6 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Photo */}
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             <div className="aspect-[3/4] relative overflow-hidden">
               <Image
                 src="/halime.png"
@@ -50,16 +41,10 @@ export default function AboutPage() {
               <div className="absolute top-0 left-0 w-16 h-16 border-t-2 border-l-2 border-gold z-10" />
               <div className="absolute bottom-0 right-0 w-16 h-16 border-b-2 border-r-2 border-gold z-10" />
             </div>
-          </motion.div>
+          </div>
 
           {/* Bio */}
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="space-y-6"
-          >
+          <div className="space-y-6">
             <div>
               <h2 className="font-playfair text-4xl text-navy mb-1">Halimé BRAHIM MAHAMAT</h2>
               <p className="text-gold font-inter text-sm tracking-wide">Juriste · Fondatrice de Depari&apos;Lex</p>
@@ -102,7 +87,7 @@ export default function AboutPage() {
             >
               Me contacter →
             </Link>
-          </motion.div>
+          </div>
         </div>
       </div>
     </main>

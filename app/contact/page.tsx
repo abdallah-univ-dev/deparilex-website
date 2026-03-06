@@ -1,57 +1,42 @@
-'use client'
-
-import { motion } from 'framer-motion'
+import type { Metadata } from 'next'
+import PageHeader from '@/components/PageHeader'
 import ContactForm from '@/components/ContactForm'
+
+export const metadata: Metadata = {
+  title: "Prendre rendez-vous — Contact | Depari'Lex",
+  description: "Contactez Depari'Lex pour un premier échange sans engagement. Réponse garantie sous 48h. Formulaire, téléphone ou Calendly.",
+  openGraph: {
+    title: "Contact | Depari'Lex",
+    description: "Premier échange sans engagement. Réponse garantie sous 48h.",
+    url: 'https://deparilex.fr/contact',
+    siteName: "Depari'Lex",
+    locale: 'fr_FR',
+    type: 'website',
+  },
+}
 
 export default function ContactPage() {
   return (
     <main className="bg-off-white min-h-screen">
-      {/* Header */}
-      <section className="bg-navy py-32 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-navy" />
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="relative max-w-3xl mx-auto text-center"
-        >
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-px w-12 bg-gold/60" />
-            <span className="text-gold text-xs tracking-[0.3em] uppercase font-inter">Contact</span>
-            <div className="h-px w-12 bg-gold/60" />
-          </div>
-          <h1 className="font-playfair text-5xl text-white mb-4">Parlons de votre projet</h1>
-          <p className="text-white/60 font-inter text-lg">
-            Premier échange sans engagement. Réponse garantie sous 48h.
-          </p>
-        </motion.div>
-      </section>
+      <PageHeader
+        eyebrow="Contact"
+        title="Parlons de votre projet"
+        subtitle="Premier échange sans engagement. Réponse garantie sous 48h."
+      />
 
       <div className="max-w-6xl mx-auto px-6 py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact form */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-          >
+          <div>
             <h2 className="font-playfair text-3xl text-navy mb-2">Envoyez un message</h2>
             <p className="text-text-gray font-inter text-sm mb-8">Décrivez votre situation et je vous recontacte rapidement.</p>
             <div className="bg-white p-8 border border-gray-100">
               <ContactForm />
             </div>
-          </motion.div>
+          </div>
 
           {/* Calendly + info */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="space-y-8"
-          >
+          <div className="space-y-8">
             {/* Calendly */}
             <div>
               <h2 className="font-playfair text-3xl text-navy mb-2">Réserver un rendez-vous</h2>
@@ -91,7 +76,7 @@ export default function ContactPage() {
                 </div>
               ))}
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </main>
