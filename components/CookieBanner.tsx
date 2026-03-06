@@ -39,7 +39,7 @@ export default function CookieBanner() {
                     role="dialog"
                     aria-label="Politique de cookies"
                     aria-live="polite"
-                    className="fixed bottom-0 left-0 right-0 z-[100] bg-navy/98 backdrop-blur-sm border-t border-gold/20 px-6 py-5 shadow-2xl"
+                    className="fixed bottom-0 left-0 right-0 z-[100] bg-[#0b1a2c] border-t border-gold/20 px-6 py-5 shadow-2xl"
                 >
                     <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
                         <div className="flex-1">
