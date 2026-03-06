@@ -33,7 +33,7 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/">
-          <Image src="/logo.png" alt="Depari'Lex" width={320} height={128} className="h-28 w-auto" />
+          <Image src="/logo.jpeg" alt="Depari'Lex" width={320} height={128} className="h-28 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
