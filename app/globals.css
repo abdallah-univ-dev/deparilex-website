@@ -17,9 +17,28 @@ html {
 body {
   background-color: #0b1a2c;
   color: #FFFFFF;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-inter), sans-serif;
 }
 
+/* ===== Accessibilité : focus-visible ===== */
+/* Supprime l'outline par défaut pour la souris, le conserve au clavier */
+*:focus {
+  outline: none;
+}
+
+*:focus-visible {
+  outline: 2px solid #C9A84C;
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Focus sur fond sombre : outline blanc + ring gold */
+.bg-navy *:focus-visible,
+nav *:focus-visible {
+  outline-color: #C9A84C;
+}
+
+/* ===== Selection ===== */
 ::selection {
   background-color: #C9A84C;
   color: #0b1a2c;

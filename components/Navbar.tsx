@@ -27,13 +27,12 @@ export default function Navbar() {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-navy/95 backdrop-blur-sm shadow-lg shadow-black/20' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-navy/95 backdrop-blur-sm shadow-lg shadow-black/20' : 'bg-transparent'
+        }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link href="/">
-          <Image src="/logo.jpeg" alt="Depari'Lex" width={320} height={128} className="h-28 w-auto" />
+          <Image src="/logo.jpeg" alt="Depari'Lex — Accueil" width={320} height={128} className="h-16 md:h-24 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
@@ -62,7 +61,9 @@ export default function Navbar() {
         <button
           className="md:hidden flex flex-col gap-1.5 p-2"
           onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menu"
+          aria-label={menuOpen ? 'Fermer le menu' : 'Ouvrir le menu'}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-menu"
         >
           <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
           <span className={`block w-6 h-0.5 bg-white transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
@@ -73,6 +74,7 @@ export default function Navbar() {
       {/* Mobile menu */}
       {menuOpen && (
         <motion.div
+          id="mobile-menu"
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden bg-navy/98 border-t border-gold/20 px-6 py-6"

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import PageHeader from '@/components/PageHeader'
 import ContactForm from '@/components/ContactForm'
+import LazyCalendly from '@/components/LazyCalendly'
+
 
 export const metadata: Metadata = {
   title: "Prendre rendez-vous — Contact | Depari'Lex",
@@ -41,15 +43,7 @@ export default function ContactPage() {
             <div>
               <h2 className="font-playfair text-3xl text-navy mb-2">Réserver un rendez-vous</h2>
               <p className="text-text-gray font-inter text-sm mb-6">Choisissez directement un créneau disponible.</p>
-              <div className="bg-white border border-gray-100 overflow-hidden">
-                <iframe
-                  src="https://calendly.com/halimebrahim7"
-                  width="100%"
-                  height="600"
-                  frameBorder="0"
-                  title="Réserver un rendez-vous"
-                />
-              </div>
+              <LazyCalendly />
             </div>
 
             {/* Contact info */}
