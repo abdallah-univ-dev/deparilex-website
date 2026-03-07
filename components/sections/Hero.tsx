@@ -54,7 +54,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-white/60 text-lg md:text-xl font-inter font-light max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Conseil juridique expert pour entrepreneurs et dirigeants.
+          Conseil stratégique en droit des affaires pour entrepreneurs et dirigeants.
           Information, analyse, rédaction et accompagnement en droit des affaires.
         </motion.p>
 

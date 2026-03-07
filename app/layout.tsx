@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://deparilex.fr'),
   openGraph: {
     title: "Depari'Lex — Conseil Juridique en Droit des Affaires",
-    description: "Conseil juridique expert pour entrepreneurs et dirigeants. Information, analyse, rédaction et accompagnement en droit des affaires à Bordeaux.",
+    description: "Conseil stratégique en droit des affaires pour entrepreneurs et dirigeants. Information, analyse, rédaction et accompagnement en droit des affaires à Bordeaux.",
     url: 'https://deparilex.fr',
     siteName: "Depari'Lex",
     locale: 'fr_FR',

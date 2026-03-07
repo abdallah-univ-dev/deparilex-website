@@ -9,7 +9,7 @@ import ContactCTA from '@/components/sections/ContactCTA'
 
 export const metadata: Metadata = {
   title: "Depari'Lex — Conseil Juridique en Droit des Affaires à Bordeaux",
-  description: "Conseil juridique expert pour entrepreneurs et dirigeants à Bordeaux. Information, analyse, rédaction de contrats et accompagnement personnalisé en droit des affaires.",
+  description: "Conseil stratégique en droit des affaires pour entrepreneurs et dirigeants à Bordeaux. Information, analyse, structuration de contrats et accompagnement personnalisé.",
   openGraph: {
     title: "Depari'Lex — Conseil Juridique à Bordeaux",
     description: "Information, analyse, rédaction et accompagnement juridique pour entrepreneurs et dirigeants à Bordeaux.",
