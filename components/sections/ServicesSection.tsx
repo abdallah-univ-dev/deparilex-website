@@ -8,26 +8,26 @@ import type { LucideIcon } from 'lucide-react'
 const services: { Icon: LucideIcon; title: string; description: string; href: string }[] = [
   {
     Icon: BookOpen,
-    title: 'Information juridique',
-    description: 'Réponses claires et précises à vos questions de droit des affaires. Comprenez vos droits et obligations avant chaque décision importante.',
+    title: 'Information et veille réglementaire',
+    description: "Éclairage sur les cadres réglementaires applicables aux activités commerciales et au droit des affaires, de manière claire et accessible.",
     href: '/services#information',
   },
   {
     Icon: SearchCheck,
-    title: 'Analyse juridique',
-    description: "Examen approfondi de vos contrats, situations et risques juridiques. Identifiez les points de vigilance avant qu'ils deviennent des problèmes.",
+    title: 'Analyse contractuelle',
+    description: "Analyse de vos documents contractuels pour identifier les points de vigilance et les risques avant de vous engager.",
     href: '/services#analyse',
   },
   {
     Icon: PenLine,
-    title: 'Rédaction de documents',
-    description: 'Contrats, CGV, statuts, courriers et actes juridiques rédigés sur mesure. Des documents solides qui protègent vos intérêts.',
+    title: 'Structuration de documents contractuels',
+    description: 'Préparation et structuration de vos documents professionnels : contrats, CGV, statuts et correspondances.',
     href: '/services#redaction',
   },
   {
     Icon: Handshake,
-    title: 'Accompagnement juridique',
-    description: 'Suivi personnalisé dans vos projets et décisions stratégiques. Un partenaire juridique de confiance à vos côtés au quotidien.',
+    title: "Accompagnement des projets d'entreprise",
+    description: "Suivi dans la structuration et l'organisation des relations contractuelles de vos projets de création ou de développement.",
     href: '/services#accompagnement',
   },
 ]

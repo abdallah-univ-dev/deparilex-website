@@ -50,20 +50,20 @@ export default function AboutPage() {
               <p className="text-gold font-inter text-sm tracking-wide">Juriste · Fondatrice de Depari&apos;Lex</p>
             </div>
             <div className="w-12 h-0.5 bg-gold" />
-            <p className="text-text-gray font-inter leading-relaxed">
+            <p className="text-text-gray font-inter leading-relaxed font-semibold">
               Juriste diplômée en droit des affaires et de l&apos;entreprise, j&apos;ai fondé Depari&apos;Lex
               avec une conviction profonde : les entrepreneurs et les dirigeants méritent un accès
-              simple, clair et accessible à l&apos;expertise juridique.
+              simple, clair et accessible à l&apos;information juridique.
             </p>
             <p className="text-text-gray font-inter leading-relaxed">
-              Mon activité consiste exclusivement en des prestations d&apos;information, d&apos;analyse,
-              de rédaction et d&apos;accompagnement juridique. Je n&apos;exerce pas les activités
-              réservées aux avocats (représentation en justice, contentieux).
+              Mon activité consiste en des prestations d&apos;information, d&apos;analyse et
+              d&apos;accompagnement en matière contractuelle et réglementaire. Je n&apos;exerce pas
+              les activités réservées aux avocats (représentation en justice, contentieux).
             </p>
             <p className="text-text-gray font-inter leading-relaxed">
-              Mon rôle est d&apos;être votre partenaire juridique de confiance au quotidien —
-              celui qui vous aide à anticiper les risques, sécuriser vos contrats et prendre
-              des décisions éclairées.
+              Mon rôle est d&apos;accompagner les entrepreneurs et dirigeants dans la compréhension
+              et la structuration de leurs enjeux contractuels, afin de les aider à anticiper les
+              risques, mieux encadrer leurs relations contractuelles et prendre des décisions éclairées.
             </p>
 
             {/* Values */}
